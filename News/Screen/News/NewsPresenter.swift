@@ -55,7 +55,7 @@ extension NewsPresenter: NewsInteractorOutput {
                 )
                 model.append(NewsCellViewModel(news: news))
             }
-            output?.runListNews(sectionData: model)
+            output?.runListNews(sectionData: model, headerTitle: section.title)
         }
     }
 }

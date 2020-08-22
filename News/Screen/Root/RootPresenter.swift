@@ -1,7 +1,7 @@
 protocol RootScreenOutput: AnyObject {}
 
 protocol RootScreenInput: AnyObject {
-    func runListNews(sectionData: [NewsCellViewModel])
+    func runListNews(sectionData: [NewsCellViewModel], headerTitle: String)
     func runDetailsNews(_ data: NewsCellViewModel)
 }
 
@@ -38,8 +38,8 @@ extension RootPresenter: RootViewOutput {
 // MARK: - RootScreenInput
 
 extension RootPresenter: RootScreenInput {
-    func runListNews(sectionData: [NewsCellViewModel]) {
-        router.pushScreenListNews(output: self, sectionData: sectionData)
+    func runListNews(sectionData: [NewsCellViewModel], headerTitle: String) {
+        router.pushScreenListNews(output: self, sectionData: sectionData, headerTitle: headerTitle)
     }
 
     func runDetailsNews(_ data: NewsCellViewModel) {

@@ -2,7 +2,7 @@ import UIKit
 
 protocol RootRouterInput {
     func pushScreen(output: RootScreenInput, errorHandler: ErrorHandler, animated: Bool)
-    func pushScreenListNews(output: RootScreenInput?, sectionData: [NewsCellViewModel])
+    func pushScreenListNews(output: RootScreenInput?, sectionData: [NewsCellViewModel], headerTitle: String)
     func pushScreenDetailsNews(newsData: NewsCellViewModel)
 }
 
@@ -18,8 +18,9 @@ class RootRouter: RootRouterInput {
         view?.push(screen: screen, animated: animated)
     }
 
-    func pushScreenListNews(output: RootScreenInput?, sectionData: [NewsCellViewModel]) {
-        let screen = ListNewsScreenAssembly().assemble(output: output, sectionData: sectionData)
+    func pushScreenListNews(output: RootScreenInput?, sectionData: [NewsCellViewModel], headerTitle: String) {
+        let screen = ListNewsScreenAssembly().assemble(output: output,
+                                                       sectionData: sectionData, headerTitle: headerTitle)
         view?.push(screen: screen, animated: true)
     }
 

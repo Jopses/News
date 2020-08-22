@@ -9,17 +9,27 @@ class ListNewsTableAdapter: NSObject {
 
     weak var output: ListNewsTableAdapterOutput?
     private let items: [PreparableViewModel]
+    private let headerTitle: String
 
     // MARK: - Lifecycle
 
-    init(sectionData: [NewsCellViewModel]) {
+    init(sectionData: [NewsCellViewModel], headerTitle: String) {
         items = sectionData
+        self.headerTitle = headerTitle
     }
 }
 
 // MARK: - UITableViewDataSource
 
 extension ListNewsTableAdapter: UITableViewDataSource {
+    func tableView(_: UITableView, heightForHeaderInSection _: Int) -> CGFloat {
+        return Grid.ml.offset
+    }
+
+    func tableView(_: UITableView, titleForHeaderInSection _: Int) -> String? {
+        return headerTitle
+    }
+
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
         items.count
     }
