@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <item>
+            <guid>https://test.com</guid>
+            <title>Title</title>
+            <link>https://test.com</link>
+            <description>
+                <![CDATA[Text]]>
+            </description>
+            <pubDate>Sat, 22 Aug 2020 01:55:00 +0300</pubDate>
+            <enclosure url="https://image.jpg" type="image/jpeg" length="50869"/>
+            <category>Category</category>
+        </item>
+        <item>
+            <guid>https://test.com</guid>
+            <title>Title</title>
+            <link>https://test.com</link>
+            <description>
+                <![CDATA[Text]]>
+            </description>
+            <pubDate>2020-01-01</pubDate>
+            <enclosure url="https://image.jpg" type="image/jpeg" length="50869"/>
+            <category>Category</category>
+        </item>
+    </channel>
+</rss>

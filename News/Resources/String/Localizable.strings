@@ -1,0 +1,21 @@
+
+// MARK: - Base
+
+"error" = "Error";
+"ok" = "Ok";
+"cancel" = "Cancel";
+"done" = "Done";
+"view" = "View";
+
+// MARK: - Errors
+
+"URL address is not valid" = "URL address is not valid";
+"Failed to parse response" = "Failed to parse response";
+"Unknown error" = "Unknown error";
+"Not found" = "Not found";
+
+// MARK: - Title
+
+"Top 7" = "Top 7";
+"Last 24" = "Last 24";
+"All" = "All";
